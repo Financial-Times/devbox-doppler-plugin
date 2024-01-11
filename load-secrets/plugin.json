@@ -1,0 +1,17 @@
+{
+    "name": "devbox-doppler-plugin_load-secrets,
+    "version": "0.0.1",
+    "readme": "This plugin adds scripts for sourcing secrets from Doppler",
+    "create_files": {
+        "{{ .Virtenv }}/bin/doppler_auth.sh": "doppler_auth.sh",
+        "{{ .Virtenv }}/bin/doppler_select_config.sh": "doppler_select_config.sh",
+        "{{ .Virtenv }}/bin/doppler_load_secrets.sh": "doppler_load_secrets.sh"
+    },
+    "shell": {
+        "init_hook": [
+            ". {{ .Virtenv }}/bin/doppler_auth.sh",
+            ". {{ .Virtenv }}/bin/doppler_select_config.sh",
+            ". {{ .Virtenv }}/bin/doppler_load_secrets.sh"
+        ]
+    }
+}
