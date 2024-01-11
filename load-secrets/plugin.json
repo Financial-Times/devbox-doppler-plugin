@@ -1,6 +1,6 @@
 {
-    "name": "devbox-doppler-plugin_load-secrets,
-    "version": "0.0.1",
+    "name": "devbox-doppler-plugin_load-secrets",
+    "version": "0.0.2",
     "readme": "This plugin adds scripts for sourcing secrets from Doppler",
     "create_files": {
         "{{ .Virtenv }}/bin/doppler_auth.sh": "doppler_auth.sh",
